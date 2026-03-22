@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const equipeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://e2-bright-demo.netlify.app/#business",
+      "name": "Cabinet Santé Lyon",
+      "employee": [
+        {
+          "@type": "Physician",
+          "name": "Marie Dupont",
+          "jobTitle": "Kinésithérapeute DE",
+          "description": "Spécialiste en rééducation orthopédique et sportive, 15 ans d'expérience"
+        },
+        {
+          "@type": "Physician",
+          "name": "Thomas Martin",
+          "jobTitle": "Ostéopathe D.O.",
+          "description": "Spécialiste en ostéopathie structurelle et viscérale, 12 ans d'expérience"
+        },
+        {
+          "@type": "Physician",
+          "name": "Sophie Bernard",
+          "jobTitle": "Kinésithérapeute DE",
+          "description": "Spécialiste en rééducation neurologique et périnéale, 8 ans d'expérience"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Notre équipe — 3 praticiens experts | Cabinet Santé Lyon"
+  description="Découvrez notre équipe de 3 praticiens expérimentés : kinésithérapeutes et ostéopathe à Lyon 6ème. Expertise, bienveillance et accompagnement personnalisé."
+  currentPage="/equipe"
+  schema={equipeSchema}
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">NOTRE ÉQUIPE</span>
+      <h1>3 experts à votre service</h1>
+      <p>
+        Notre équipe pluridisciplinaire réunit kinésithérapeutes et ostéopathe
+        dans un cabinet moderne de Lyon 6ème. Chaque praticien apporte une expertise
+        complémentaire pour votre prise en charge globale.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="label">LES PRATICIENS</span>
+        <h2 class="section-title">Rencontrez nos spécialistes</h2>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Praticien 1 -->
+        <article class="team-card">
+          <div class="team-avatar-wrap" aria-hidden="true">
+            <div class="team-initial">MD</div>
+          </div>
+          <div class="team-info">
+            <h3>Marie Dupont</h3>
+            <p class="team-specialty">Kinésithérapeute D.E.</p>
+            <p class="team-bio">
+              Diplômée de l'IFMK de Lyon en 2009, Marie s'est spécialisée en rééducation
+              orthopédique et traumatologie sportive. Elle accompagne aussi bien les sportifs
+              de haut niveau que les patients en rééducation post-chirurgicale.
+              Formatrice en techniques myo-fasciales, elle intègre les dernières avancées
+              scientifiques dans sa pratique quotidienne.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">Rééducation orthopédique</span>
+              <span class="team-tag">Traumatologie sportive</span>
+              <span class="team-tag">Myofascial</span>
+              <span class="team-tag">15 ans d'exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Praticien 2 -->
+        <article class="team-card">
+          <div class="team-avatar-wrap" aria-hidden="true">
+            <div class="team-initial">TM</div>
+          </div>
+          <div class="team-info">
+            <h3>Thomas Martin</h3>
+            <p class="team-specialty">Ostéopathe D.O.</p>
+            <p class="team-bio">
+              Diplômé de l'ESO Paris en 2012, Thomas a développé une expertise reconnue
+              en ostéopathie structurelle, viscérale et crânio-sacrée. Il prend en charge
+              aussi bien les nourrissons que les seniors, avec une attention particulière
+              pour la femme enceinte et les sportifs. Il collabore avec plusieurs clubs
+              sportifs de la région lyonnaise.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">Ostéopathie structurelle</span>
+              <span class="team-tag">Viscéral</span>
+              <span class="team-tag">Périnatal</span>
+              <span class="team-tag">12 ans d'exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Praticien 3 -->
+        <article class="team-card">
+          <div class="team-avatar-wrap" aria-hidden="true">
+            <div class="team-initial">SB</div>
+          </div>
+          <div class="team-info">
+            <h3>Sophie Bernard</h3>
+            <p class="team-specialty">Kinésithérapeute D.E.</p>
+            <p class="team-bio">
+              Kinésithérapeute depuis 2016, Sophie a complété sa formation avec un DU
+              en rééducation neurologique et une spécialisation en kinésithérapie périnéale
+              et pelvi-périnéologie. Elle assure également le suivi des patients
+              atteints de pathologies neurologiques (SEP, Parkinson, AVC)
+              avec une approche empathique et innovante.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">Neurologie</span>
+              <span class="team-tag">Périnéale</span>
+              <span class="team-tag">Bilan postural</span>
+              <span class="team-tag">8 ans d'exp.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" style="background:var(--bg-light);padding:5rem 0;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="label">NOS ENGAGEMENTS</span>
+        <h2 class="section-title">Ce qui nous distingue</h2>
+        <p class="section-subtitle" style="margin:0 auto;">
+          Au Cabinet Santé Lyon, chaque prise en charge repose sur des valeurs fortes
+          et une exigence permanente de qualité.
+        </p>
+      </div>
+
+      <div class="values-grid">
+
+        <div class="value-card">
+          <div class="icon-circle" style="margin:0 auto;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h4>Excellence clinique</h4>
+          <p>Formation continue et pratique basée sur les données probantes les plus récentes.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="icon-circle" style="margin:0 auto;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <h4>Bienveillance</h4>
+          <p>Un accueil chaleureux et une écoute active pour comprendre vos besoins et vos inquiétudes.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="icon-circle" style="margin:0 auto;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h4>Disponibilité</h4>
+          <p>Rendez-vous sous 48h et flexibilité des horaires pour s'adapter à votre agenda.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="icon-circle" style="margin:0 auto;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h4>Pluridisciplinarité</h4>
+          <p>Une équipe complémentaire qui collabore pour vous offrir une prise en charge globale.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-bar">
+        <div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Praticiens experts</div>
+        </div>
+        <div>
+          <div class="stat-number">35+</div>
+          <div class="stat-label">Années d'exp. cumulées</div>
+        </div>
+        <div>
+          <div class="stat-number">6</div>
+          <div class="stat-label">Spécialités proposées</div>
+        </div>
+        <div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Taux de satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-deco" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="label">CONSULTATION</span>
+      <h2>Rencontrez notre équipe</h2>
+      <p>
+        Choisissez votre praticien ou laissez-nous vous orienter vers
+        le spécialiste le plus adapté à votre situation.
+      </p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        <a href="tel:0472112233" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91A16 16 0 0016 15.91l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0124 16z"/></svg>
+          04 72 11 22 33
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

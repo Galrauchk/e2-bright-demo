@@ -1,0 +1,366 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://e2-bright-demo.netlify.app/#business",
+      "name": "Cabinet Santé Lyon",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Soins proposés",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Kinésithérapie" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Ostéopathie" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Rééducation fonctionnelle" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Massage thérapeutique" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Bilan postural" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Suivi personnalisé" } }
+        ]
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Nos soins — Kinésithérapie, Ostéopathie & Rééducation | Cabinet Santé Lyon"
+  description="Découvrez tous nos soins à Lyon 6ème : kinésithérapie, ostéopathie, rééducation, massage thérapeutique, bilan postural et suivi personnalisé. Prenez RDV sous 48h."
+  currentPage="/services"
+  schema={servicesSchema}
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">NOS SOINS</span>
+      <h1>Des soins complets pour votre santé</h1>
+      <p>
+        Notre cabinet propose une palette complète de soins en kinésithérapie et ostéopathie.
+        Chaque traitement est adapté à vos besoins spécifiques pour une efficacité optimale.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <div class="services-detail">
+    <div class="container">
+
+      <!-- 1. Kinésithérapie -->
+      <div class="service-detail-item" id="kinesitherapie">
+        <div class="service-detail-content">
+          <span class="service-detail-label">SOIN N°1</span>
+          <h2>Kinésithérapie</h2>
+          <p>
+            La kinésithérapie est une discipline médicale de premier plan pour le traitement
+            des affections musculosquelettiques, neurologiques et respiratoires. Notre approche
+            combine techniques manuelles, exercices thérapeutiques et éducation du patient.
+          </p>
+          <p>
+            Nos kinésithérapeutes élaborent un programme personnalisé après évaluation complète
+            de votre état de santé, de vos habitudes de vie et de vos objectifs.
+          </p>
+          <ul class="service-detail-list">
+            <li>Traitement des douleurs dorsales, cervicales et articulaires</li>
+            <li>Rééducation après fracture, entorse ou opération</li>
+            <li>Prise en charge des tendinites et des pathologies sportives</li>
+            <li>Rééducation neurologique (AVC, sclérose en plaques)</li>
+            <li>Kinésithérapie respiratoire pour adultes et enfants</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+        <div class="service-detail-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 240" fill="none" width="200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sv1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#0066ff"/>
+              </linearGradient>
+            </defs>
+            <circle cx="120" cy="60" r="30" fill="url(#sv1)" opacity="0.9"/>
+            <rect x="107" y="90" width="26" height="55" rx="13" fill="url(#sv1)" opacity="0.85"/>
+            <path d="M107 108 Q85 115 72 130" stroke="url(#sv1)" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.78"/>
+            <path d="M133 108 Q155 115 168 130" stroke="url(#sv1)" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.78"/>
+            <path d="M113 145 Q110 175 108 200" stroke="url(#sv1)" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.82"/>
+            <path d="M127 145 Q130 175 132 200" stroke="url(#sv1)" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.82"/>
+            <!-- Movement arrows -->
+            <path d="M50 80 Q40 90 50 100" stroke="#00e5ff" stroke-width="2" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+            <path d="M190 80 Q200 90 190 100" stroke="#0066ff" stroke-width="2" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 2. Ostéopathie -->
+      <div class="service-detail-item" id="osteopathie">
+        <div class="service-detail-content">
+          <span class="service-detail-label">SOIN N°2</span>
+          <h2>Ostéopathie</h2>
+          <p>
+            L'ostéopathie est une médecine manuelle holistique qui considère le corps dans sa globalité.
+            Le praticien recherche et traite les restrictions de mobilité qui peuvent affecter les
+            différentes structures du corps : os, muscles, ligaments, fascias et organes.
+          </p>
+          <p>
+            Les manipulations ostéopathiques sont douces, précises et adaptées à tous les âges,
+            du nourrisson au senior, en passant par la femme enceinte et le sportif.
+          </p>
+          <ul class="service-detail-list">
+            <li>Douleurs chroniques du dos, du cou et des articulations</li>
+            <li>Troubles digestifs et viscéraux fonctionnels</li>
+            <li>Maux de tête, migraines et vertiges</li>
+            <li>Suivi périnatal (grossesse, post-partum)</li>
+            <li>Ostéopathie pédiatrique et crânio-sacrée</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+        <div class="service-detail-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 200" fill="none" width="220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sv2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#0066ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Two hands -->
+            <path d="M30 140 Q25 120 30 100 Q35 80 50 78 Q65 76 68 95 L72 140" fill="url(#sv2)" opacity="0.85"/>
+            <path d="M72 95 Q72 75 85 70 Q98 65 100 80 L100 140" fill="url(#sv2)" opacity="0.8"/>
+            <path d="M100 80 Q100 60 113 58 Q126 56 126 72 L126 140" fill="url(#sv2)" opacity="0.75"/>
+            <path d="M126 72 Q126 54 138 52 Q150 50 150 67 L150 140" fill="url(#sv2)" opacity="0.7"/>
+            <rect x="28" y="140" width="124" height="28" rx="14" fill="url(#sv2)" opacity="0.88"/>
+            <!-- Right hand mirror -->
+            <path d="M210 140 Q215 120 210 100 Q205 80 190 78 Q175 76 172 95 L168 140" fill="url(#sv2)" opacity="0.85"/>
+            <path d="M168 95 Q168 75 155 70 Q142 65 140 80 L140 140" fill="url(#sv2)" opacity="0.8"/>
+            <rect x="168" y="140" width="44" height="28" rx="14" fill="url(#sv2)" opacity="0.88"/>
+            <!-- Central glow dot -->
+            <circle cx="120" cy="80" r="14" fill="url(#sv2)" opacity="0.25"/>
+            <circle cx="120" cy="80" r="7" fill="url(#sv2)" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 3. Rééducation -->
+      <div class="service-detail-item" id="reeducation">
+        <div class="service-detail-content">
+          <span class="service-detail-label">SOIN N°3</span>
+          <h2>Rééducation fonctionnelle</h2>
+          <p>
+            La rééducation fonctionnelle vise à restaurer les capacités motrices et fonctionnelles
+            après un traumatisme, une intervention chirurgicale ou une maladie. Notre approche
+            progressive permet un retour optimal aux activités quotidiennes et sportives.
+          </p>
+          <p>
+            Chaque programme est individualisé, évolutif et coordonné avec votre médecin
+            traitant et les autres spécialistes impliqués dans votre parcours de soins.
+          </p>
+          <ul class="service-detail-list">
+            <li>Rééducation post-chirurgicale (prothèse, ligamentoplastie, ménisque)</li>
+            <li>Récupération après fracture ou entorse grave</li>
+            <li>Rééducation neurologique et post-AVC</li>
+            <li>Programme de renforcement musculaire progressif</li>
+            <li>Proprioception et équilibre pour la prévention des rechutes</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+        <div class="service-detail-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 200" fill="none" width="200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sv3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#0066ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Steps / progression bars -->
+            <rect x="20" y="160" width="36" height="20" rx="6" fill="url(#sv3)" opacity="0.5"/>
+            <rect x="62" y="140" width="36" height="40" rx="6" fill="url(#sv3)" opacity="0.65"/>
+            <rect x="104" y="115" width="36" height="65" rx="6" fill="url(#sv3)" opacity="0.8"/>
+            <rect x="146" y="85" width="36" height="95" rx="6" fill="url(#sv3)" opacity="0.9"/>
+            <rect x="188" y="52" width="36" height="128" rx="6" fill="url(#sv3)"/>
+            <!-- Progress arrow -->
+            <path d="M22 80 L80 55 L140 42 L200 28" stroke="url(#sv3)" stroke-width="2.5" fill="none" stroke-dasharray="5 4" opacity="0.6" stroke-linecap="round"/>
+            <polygon points="200,20 215,30 200,38" fill="url(#sv3)" opacity="0.7"/>
+            <!-- Label -->
+            <text x="120" y="20" text-anchor="middle" font-size="11" fill="#0066ff" font-family="Inter,sans-serif" font-weight="600" opacity="0.8">PROGRESSION</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 4. Massage thérapeutique -->
+      <div class="service-detail-item" id="massage">
+        <div class="service-detail-content">
+          <span class="service-detail-label">SOIN N°4</span>
+          <h2>Massage thérapeutique</h2>
+          <p>
+            Le massage thérapeutique va au-delà du simple bien-être. Il s'agit d'une technique
+            médicale précise visant à traiter des pathologies spécifiques : contractures musculaires,
+            cicatrices, œdèmes, ou encore stress chronique avec effets somatiques.
+          </p>
+          <p>
+            Nos praticiens maîtrisent plusieurs techniques : massage suédois, drainage lymphatique,
+            massage transverse profond (Cyriax), massage des cicatrices et réflexologie plantaire.
+          </p>
+          <ul class="service-detail-list">
+            <li>Traitement des contractures et tensions musculaires profondes</li>
+            <li>Drainage lymphatique manuel post-opératoire</li>
+            <li>Massage de cicatrices pour assouplissement tissulaire</li>
+            <li>Récupération musculaire sportive accélérée</li>
+            <li>Accompagnement du stress et des troubles psychosomatiques</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+        <div class="service-detail-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 200" fill="none" width="220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sv4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#0066ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Wave lines -->
+            <path d="M20 60 Q50 40 80 60 Q110 80 140 60 Q170 40 200 60 Q220 72 230 60" stroke="url(#sv4)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+            <path d="M20 95 Q50 75 80 95 Q110 115 140 95 Q170 75 200 95 Q220 107 230 95" stroke="url(#sv4)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+            <path d="M20 130 Q50 110 80 130 Q110 150 140 130 Q170 110 200 130 Q220 142 230 130" stroke="url(#sv4)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <path d="M20 162 Q50 142 80 162 Q110 182 140 162 Q170 142 200 162 Q220 174 230 162" stroke="url(#sv4)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.45"/>
+            <!-- Center circle -->
+            <circle cx="120" cy="100" r="26" fill="url(#sv4)" opacity="0.12"/>
+            <circle cx="120" cy="100" r="14" fill="url(#sv4)" opacity="0.2"/>
+            <circle cx="120" cy="100" r="6" fill="url(#sv4)" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 5. Bilan postural -->
+      <div class="service-detail-item" id="bilan">
+        <div class="service-detail-content">
+          <span class="service-detail-label">SOIN N°5</span>
+          <h2>Bilan postural</h2>
+          <p>
+            Le bilan postural est une évaluation complète de votre posture en statique et en
+            dynamique. Il permet d'identifier les déséquilibres, asymétries et compensations
+            qui peuvent générer douleurs, fatigue ou risque de blessures.
+          </p>
+          <p>
+            À l'issue du bilan, un rapport détaillé vous est remis avec les recommandations
+            de correction et un programme d'exercices personnalisé à réaliser au quotidien.
+          </p>
+          <ul class="service-detail-list">
+            <li>Analyse posturale statique et dynamique complète</li>
+            <li>Détection des scolioses, hyperlordoses et hypercyphoses</li>
+            <li>Évaluation des appuis podaux et de la démarche</li>
+            <li>Bilan musculaire et test de flexibilité segmentaire</li>
+            <li>Programme de correction posturale individualisé</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+        <div class="service-detail-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 260" fill="none" width="180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sv5" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#0066ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Vertical axis -->
+            <line x1="120" y1="10" x2="120" y2="250" stroke="#e5e7eb" stroke-width="1.5"/>
+            <!-- Horizontal guides -->
+            <line x1="60" y1="55" x2="180" y2="55" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="60" y1="125" x2="180" y2="125" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="60" y1="195" x2="180" y2="195" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 3"/>
+            <!-- Figure -->
+            <circle cx="120" cy="38" r="22" fill="url(#sv5)" opacity="0.88"/>
+            <rect x="110" y="60" width="20" height="52" rx="10" fill="url(#sv5)" opacity="0.82"/>
+            <path d="M110 78 Q90 84 80 98" stroke="url(#sv5)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.75"/>
+            <path d="M130 78 Q150 84 160 98" stroke="url(#sv5)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.75"/>
+            <path d="M114 112 Q111 150 110 195" stroke="url(#sv5)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.8"/>
+            <path d="M126 112 Q129 150 130 195" stroke="url(#sv5)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.8"/>
+            <!-- Alignment dots on axis -->
+            <circle cx="120" cy="38" r="4" fill="#00e5ff"/>
+            <circle cx="120" cy="85" r="4" fill="#00e5ff"/>
+            <circle cx="120" cy="145" r="4" fill="#00e5ff"/>
+            <circle cx="120" cy="195" r="4" fill="#00e5ff"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 6. Suivi personnalisé -->
+      <div class="service-detail-item" id="suivi">
+        <div class="service-detail-content">
+          <span class="service-detail-label">SOIN N°6</span>
+          <h2>Suivi personnalisé</h2>
+          <p>
+            Notre approche de suivi personnalisé assure la continuité et la cohérence de
+            votre prise en charge. Les 3 praticiens du cabinet communiquent régulièrement
+            pour coordonner les interventions et adapter les traitements en temps réel.
+          </p>
+          <p>
+            Vous bénéficiez d'un accès privilégié à votre praticien référent et d'une
+            coordination avec votre médecin traitant, chirurgien ou tout autre spécialiste
+            impliqué dans votre suivi.
+          </p>
+          <ul class="service-detail-list">
+            <li>Praticien référent dédié tout au long du suivi</li>
+            <li>Dossier patient partagé entre les praticiens du cabinet</li>
+            <li>Comptes rendus transmis aux médecins prescripteurs</li>
+            <li>Exercices personnalisés à réaliser entre les séances</li>
+            <li>Disponibilité téléphonique pour toute question urgente</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+        <div class="service-detail-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 220" fill="none" width="200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sv6" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#0066ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Calendar -->
+            <rect x="28" y="40" width="184" height="160" rx="16" fill="#f8fafc" stroke="url(#sv6)" stroke-width="2"/>
+            <rect x="28" y="40" width="184" height="48" rx="16" fill="url(#sv6)"/>
+            <rect x="28" y="72" width="184" height="16" rx="0" fill="url(#sv6)"/>
+            <!-- Header dots (days) -->
+            <text x="56" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)" font-family="Inter,sans-serif">L</text>
+            <text x="84" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)" font-family="Inter,sans-serif">M</text>
+            <text x="112" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)" font-family="Inter,sans-serif">M</text>
+            <text x="140" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)" font-family="Inter,sans-serif">J</text>
+            <text x="168" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)" font-family="Inter,sans-serif">V</text>
+            <text x="196" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)" font-family="Inter,sans-serif">S</text>
+            <!-- Check marks -->
+            <circle cx="84" cy="112" r="12" fill="url(#sv6)" opacity="0.2"/>
+            <path d="M79 112 l3 3 6-6" stroke="url(#sv6)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="140" cy="112" r="12" fill="url(#sv6)" opacity="0.2"/>
+            <path d="M135 112 l3 3 6-6" stroke="url(#sv6)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="84" cy="152" r="12" fill="url(#sv6)"/>
+            <path d="M79 152 l3 3 6-6" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="140" cy="152" r="12" fill="url(#sv6)" opacity="0.15"/>
+            <!-- Title in calendar header -->
+            <text x="120" y="62" text-anchor="middle" font-size="13" fill="white" font-family="Inter,sans-serif" font-weight="700">SUIVI</text>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-deco" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="label">CONSULTATION</span>
+      <h2>Besoin d'un soin spécifique ?</h2>
+      <p>
+        Nos praticiens analysent votre situation lors d'une première consultation
+        et vous proposent le plan de soin le plus adapté.
+      </p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn-primary">Prendre rendez-vous</a>
+        <a href="/equipe" class="btn-secondary">
+          Rencontrer l'équipe
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
