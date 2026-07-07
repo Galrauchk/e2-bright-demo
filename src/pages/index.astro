@@ -1,11 +1,63 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Cabinet Santé Lyon",
+      "url": "https://e2-bright-demo.netlify.app"
+    },
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://e2-bright-demo.netlify.app/#business",
+      "name": "Cabinet Santé Lyon",
+      "description": "Kinésithérapie & Ostéopathie à Lyon 6ème",
+      "url": "https://e2-bright-demo.netlify.app",
+      "telephone": "+33472112233",
+      "email": "contact@cabinet-sante-lyon.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lyon 6ème",
+        "addressLocality": "Lyon",
+        "postalCode": "69006",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.7676",
+        "longitude": "4.8467"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "medicalSpecialty": ["PhysicalTherapy", "Osteopathic"],
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 3 },
+      "priceRange": "€€",
+      "image": "https://e2-bright-demo.netlify.app/favicon.svg",
+      "sameAs": []
+    }
+  ]
+};
 ---
 
 <Layout
   title="Cabinet Santé Lyon — Kinésithérapie & Ostéopathie à Lyon 6ème"
   description="Cabinet de kinésithérapie et ostéopathie à Lyon 6ème. 3 praticiens expérimentés, rendez-vous sous 48h, mutuelle acceptée. Appelez le 04 72 11 22 33."
   currentPage="/"
+  schema={homeSchema}
 >
   <!-- ═══════════════════════════════════════
        HERO — Split Layout
