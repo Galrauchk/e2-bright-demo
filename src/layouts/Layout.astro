@@ -5,6 +5,9 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
+import ConsentTracking from '../components/ConsentTracking.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
+import LegalLinks from '../components/LegalLinks.astro';
 
 interface Props {
   title: string;
@@ -86,6 +89,7 @@ const navLinks = [
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <ConsentTracking />
   <meta name="generator" content={Astro.generator} />
 
   <title>{title}</title>
@@ -252,7 +256,7 @@ const navLinks = [
           <h4>Contact</h4>
           <ul class="footer-list">
             <li><a href="tel:0472112233">04 72 11 22 33</a></li>
-            <li><a href="mailto:contact@cabinet-sante-lyon.fr">contact@cabinet-sante-lyon.fr</a></li>
+            <li><a href="/contact">contact@cabinet-sante-lyon.fr</a></li>
             <li><a href="/contact">Prendre rendez-vous</a></li>
           </ul>
         </div>
@@ -262,6 +266,7 @@ const navLinks = [
         <p class="footer-copy">© 2024 Cabinet Santé Lyon · Tous droits réservés</p>
         <p class="footer-wt">Créé par <a href="https://webtrafic.fr" target="_blank" rel="noopener">WebTrafic</a> · Template E2 BRIGHT</p>
       </div>
+      <LegalLinks includeMentions={false} />
     </div>
   </footer>
 
@@ -270,5 +275,6 @@ const navLinks = [
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91A16 16 0 0016 15.91l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0124 16z"/></svg>
     Prendre RDV
   </a>
+  <ConsentBanner />
 </body>
 </html>
