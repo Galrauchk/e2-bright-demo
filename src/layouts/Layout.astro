@@ -264,11 +264,12 @@ const navLinks = [
 
       <div class="footer-bottom">
         <p class="footer-copy">© 2024 Cabinet Santé Lyon · Tous droits réservés</p>
-        <p class="footer-wt">Créé par <a href="https://webtrafic.fr" target="_blank" rel="noopener">WebTrafic</a> · Template E2 BRIGHT</p>
+
       </div>
       <LegalLinks includeMentions={false} />
     </div>
-  </footer>
+  <p data-webtrafic-credit style="margin: 1rem; text-align: center; font-size: 0.75rem; line-height: 1.6;">Site réalisé par <a href="https://webtrafic.fr/" style="color: inherit; text-decoration: underline; text-underline-offset: 0.2em;">WebTrafic</a></p>
+</footer>
 
   <!-- Floating CTA -->
   <a href="tel:0472112233" class="floating-btn" aria-label="Appeler le cabinet">
@@ -278,3 +279,9 @@ const navLinks = [
   <ConsentBanner />
 </body>
 </html>
+
+<style>
+  @media (max-width: 767px) {
+    [data-webtrafic-credit] { padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+  }
+</style>
