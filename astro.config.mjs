@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://e2-bright-demo.netlify.app',
+  site: 'https://demo-bright.webtrafic.fr',
   integrations: [sitemap({
     filter: (page) =>
       !page.includes('/politique-confidentialite') &&

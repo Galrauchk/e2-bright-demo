@@ -33,6 +33,6 @@
     "wrangler": "4.143.0"
   },
   "cloudflare": {
-    "domaine": "e2-bright-demo.netlify.app"
+    "domaine": "demo-bright.webtrafic.fr"
   }
 }
