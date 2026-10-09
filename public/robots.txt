@@ -21,8 +21,8 @@ User-agent: DuckAssistBot
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://e2-bright-demo.netlify.app/sitemap-index.xml
+Sitemap: https://demo-bright.webtrafic.fr/sitemap-index.xml
 
 # Index pour les agents IA / LLM (llmstxt.org)
-# https://e2-bright-demo.netlify.app/llms.txt - index
-# https://e2-bright-demo.netlify.app/llms-full.txt - contenu intégral
+# https://demo-bright.webtrafic.fr/llms.txt - index
+# https://demo-bright.webtrafic.fr/llms-full.txt - contenu intégral
